@@ -56,9 +56,7 @@ function setUpAudio(){
                     // Нужно ли вызвать её ещё раз?
                     if (isPlaying) {
                         requestAnimationFrame(updateProgress);
-                        progress.innerHTML = `
-                            <div class="progress-bar progress-bar-striped" role="progressbar" style = "height: 16px; width: ${100*audio.currentTime/audio.duration}%" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                        `
+                        node.querySelector(`.progress-bar`).style.width = `${100*audio.currentTime/audio.duration}%`
                     }else{
                         timeNode.innerHTML = `${albums[j]['tracks'][i]['time']}`;
                         console.log(`ОНО ЗДЕСЬ БЫЛО`);
@@ -147,7 +145,7 @@ for (let i = 0; i < albums[j]['tracks'].length; i++){
             <audio class="audio" src="${albums[j]['tracks'][i]['src']}"></audio>
             </div>
             <div class="progress d-none">
-                
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style = "height: 16px; width: 0%" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
         </li>
         
@@ -157,7 +155,6 @@ for (let i = 0; i < albums[j]['tracks'].length; i++){
 
 
 setUpAudio();
-
 
 
 
