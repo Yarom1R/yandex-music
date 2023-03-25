@@ -1,0 +1,42 @@
+.title{
+    text-decoration: none !important;
+    color: black;
+}
+
+.title:hover{
+    color: black;
+}
+
+
+
+.description{
+    margin: 25px;
+    display: inline-block;
+}
+
+.music-list{
+    display: inline-block;
+    margin: 25px;
+    width: 50%;
+}
+
+.track-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.content{
+    display: flex;
+    align-items:flex-start;
+}
+
+.track:hover{
+    outline: 5px solid rgb(255, 187, 0);
+    z-index: 1;
+}
+
+.time{
+    color: black;
+    font-weight: normal;
+    margin: 0;
+}
